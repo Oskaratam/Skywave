@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --defaultThemeColor1: #333333;
+    --defaultThemeColor2: #e91e63; 
+    --defaultThemeColor3: #f492b4;
+    --defaultThemeColor4: rgba(233,30,99,.15);
+    --defaultThemeColor5: #555555;
+    --defaultTextColor: #FFFFFF;
+    --defaultLightTextColor: #999999;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
