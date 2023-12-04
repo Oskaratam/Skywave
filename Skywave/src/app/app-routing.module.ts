@@ -7,8 +7,11 @@ const routes: Routes = [
     path: "home", component: MainComponent
   },
   {
-    path: "", component: MainComponent
-  }
+    path: "profile", loadChildren: () => import('./profile/profile.module').then((m) => m.ProfileModule), data: {animation: "bottomSlide"}
+  },
+  {
+    path: "", redirectTo: "home", pathMatch: "full"
+  },
 ];
 
 @NgModule({

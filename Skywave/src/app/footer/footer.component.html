@@ -13,6 +13,6 @@
     </div>
     <div class="flex flex-col">
         <img [class.activatedIcon]="currentIcon == 'profileIcon'" src="../../assets/images/user.png" alt="Profile Icon" #profileIcon>
-        <h2 [class.activatedIcon]="currentIcon == 'profileIcon'" (click)="activateIcon('profileIcon')" #profileIcon>Profile</h2>
+        <h2 [class.activatedIcon]="currentIcon == 'profileIcon'" (click)="activateIcon('profileIcon')" routerLink="profile" #profileIcon>Profile</h2>
     </div>
 </section>

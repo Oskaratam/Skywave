@@ -1,5 +1,7 @@
 <div class="relative rounded-3xl main">
     <sw-header></sw-header>
-    <sw-main></sw-main>
+    <div [@routeAnimations]="prepareRoute(outlet)">
+        <router-outlet #outlet = "outlet"></router-outlet>
+    </div>
     <sw-footer></sw-footer>
 </div>

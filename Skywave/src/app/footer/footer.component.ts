@@ -9,7 +9,7 @@ export class FooterComponent {
 
   [key: string]: any;
 
-  currentIcon : string = '';
+  currentIcon : string = 'homeIcon';
 
   @ViewChildren('homeIcon') homeIcon !: QueryList<any>;
   @ViewChildren('servicesIcon') servicesIcon !: QueryList<any>;
