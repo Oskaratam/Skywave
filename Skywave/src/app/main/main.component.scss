@@ -1,0 +1,24 @@
+section {
+    height: 80%;
+    width: 100%;
+    background-color: var(--defaultThemeColor1);
+}
+
+span {
+    color: var(--defaultLightTextColor)
+}
+.wrapper {
+    width:fit-content;
+    background-color: rgba(164, 164, 164, 0.9);
+}
+
+
+.info {
+    h1 {
+        color: var(--defaultThemeColor2);
+        margin-bottom: 4px;
+    }
+    span {
+        color: #be164e;
+    }
+}

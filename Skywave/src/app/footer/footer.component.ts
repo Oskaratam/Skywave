@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'sw-footer',
@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+  [key: string]: any;
+
+  currentIcon : string = '';
+
+  @ViewChildren('homeIcon') homeIcon !: QueryList<any>;
+  @ViewChildren('servicesIcon') servicesIcon !: QueryList<any>;
+  @ViewChildren('historyIcon') historyIcon !: QueryList<any>;
+  @ViewChildren('profileIcon') profileIcon !: QueryList<any>;
+
+
+  activateIcon( iconName : string) {
+    this.currentIcon = iconName;
+  //   const iconList = this[iconName];
+  //   iconList.forEach((icon: any)  => {
+  //     icon.nativeElement.classList.add("activatedIcon");
+  //   });
+  }
 }

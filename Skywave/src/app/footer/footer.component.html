@@ -1,18 +1,18 @@
-<section class="relative flex justify-around text-white align-bottom rounded-b-3xl">
+<section class="fixed bottom-0 flex justify-around text-white align-bottom border-t-gray-5 rounded-b-2xl">
     <div class="flex flex-col">
-        <img src="../../assets/images/home.png" alt="Home Icon">
-        <h2>Home</h2>
+        <img [class.activatedIcon]="currentIcon == 'homeIcon'"  src="../../assets/images/home.png" alt="Home Icon" #homeIcon>
+        <h2 [class.activatedIcon]="currentIcon == 'homeIcon'" (click)="activateIcon('homeIcon')" routerLink="home" #homeIcon>Home</h2>
     </div>
     <div class="flex flex-col">
-        <img src="../../assets/images/adaptation.png" alt="Services Icon">
-        <h2>Services</h2>
+        <img [class.activatedIcon]="currentIcon == 'servicesIcon'" src="../../assets/images/adaptation.png" alt="Services Icon" #servicesIcon>
+        <h2 [class.activatedIcon]="currentIcon == 'servicesIcon'" (click)="activateIcon('servicesIcon')" #servicesIcon>Services</h2>
     </div>
     <div class="flex flex-col">
-        <img src="../../assets/images/scroll.png" alt="History Icon">
-        <h2>History</h2>
+        <img [class.activatedIcon]="currentIcon == 'historyIcon'" src="../../assets/images/scroll.png" alt="History Icon" #historyIcon>
+        <h2 [class.activatedIcon]="currentIcon == 'historyIcon'" (click)="activateIcon('historyIcon')" #historyIcon>History</h2>
     </div>
     <div class="flex flex-col">
-        <img src="../../assets/images/user.png" alt="Profile Icon">
-        <h2>Profile</h2>
+        <img [class.activatedIcon]="currentIcon == 'profileIcon'" src="../../assets/images/user.png" alt="Profile Icon" #profileIcon>
+        <h2 [class.activatedIcon]="currentIcon == 'profileIcon'" (click)="activateIcon('profileIcon')" #profileIcon>Profile</h2>
     </div>
 </section>

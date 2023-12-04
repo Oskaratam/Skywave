@@ -1,0 +1,51 @@
+
+main {
+    width: 80vw;
+    height: 45vh;
+}
+.wrapper {
+    height: 50vh;
+}
+
+main > img {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -7%;
+}
+
+.nameDiv {
+    height: 60px;
+    left: 17%
+}
+@media (max-height: 840px) {
+    .nameDiv {
+        height: 45px;
+        left: 17%
+    } 
+}
+@media (max-height: 840px){
+    main > img {
+        width:45px;
+        height: 45px;
+        top: -8.5%
+    }
+}
+@media (max-height: 600px){
+    main > img {
+        width:40px;
+        height: 40px;
+        top: -10%
+    }
+}
+
+li{
+    color: #ababab;
+}
+ul {
+    text-align: center;
+}
+
+
