@@ -10,7 +10,7 @@ export const slide = trigger('routeAnimations', [
                 position: "absolute",
                 bottom: "-100%",
             }),
-            animate('0.5s ease-out', style({
+            animate('0.3s ease-out', style({
                 position: "absolute",
                 bottom: "22%"
             })), 

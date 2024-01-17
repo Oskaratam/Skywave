@@ -4,3 +4,21 @@
     height: 100vh;
     background-color: var(--defaultThemeColor1);
 }
+
+.ripple {
+    background-position: center;
+    transition: background 0.8s;
+  }
+  
+  .ripple:hover{
+    background-color: #47a7f5;
+    background-image: radial-gradient(circle,transparent 1%,#47a7f5 1%);
+    background-position: center;
+    background-size: 15000%;
+  }
+  
+  .ripple:active{
+    transition: background 0s;
+    background-color: #6eb9f7;
+    background-size: 100%;
+  }

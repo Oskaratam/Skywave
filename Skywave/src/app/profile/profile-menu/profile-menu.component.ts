@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Profile } from '../profile-interface';
+import { CurrentNumberService } from 'src/app/services/current-number.service';
 
 @Component({
   selector: 'sw-profile-menu',
@@ -8,14 +9,19 @@ import { Profile } from '../profile-interface';
 })
 export class ProfileMenuComponent {
 
+  constructor( public currNumber : CurrentNumberService) {
+   }
+
   profiles : Profile[] = [
     { phoneNumber: "+098-73-46-432",
       userName: "TestUser1",
+      tariffName: "FullGaming",
       profileIsPicked: true 
     },
     {
-      phoneNumber: "+795-031-142-123",
+      phoneNumber: "+795-031-142",
       userName: "TestUser2",
+      tariffName: "",
       profileIsPicked: false
     }
   ]
@@ -25,6 +31,8 @@ export class ProfileMenuComponent {
       profile.profileIsPicked = false;
     })
     profile.profileIsPicked = true;
-
+    this.currNumber.currentProfile = profile;
   }
+
+ 
 }

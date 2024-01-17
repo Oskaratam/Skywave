@@ -1,0 +1,38 @@
+.bg {
+    width: 100vw;
+    height: 10000vh;
+    background-color: rgba(0, 0, 0, 0.65)
+}
+
+section {
+    height: 55vh; 
+}
+
+.wrapper2 {
+    height: 30vh;
+    top: 10vh;
+}
+
+.wrapper {
+    margin-right: 0.2vw;
+    height: 60vh;
+    width: 100vw;
+}
+
+.firstEl {
+    margin-top: 5vh;
+}
+
+div::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  
+  div::-webkit-scrollbar-thumb {
+    background: #f492b4;
+  }
+  
+ 
+  div::-webkit-scrollbar-thumb:hover {
+    background: #e91e63;
+  }

@@ -1,0 +1,16 @@
+<div  class="fixed top-0 right-0 z-20 bg">
+    <div routerLink="../home" class="h-40 wrapper">
+        
+    </div>
+    <section class="absolute z-30 flex w-full overflow-hidden overflow-x-scroll whitespace-nowrap top-32">
+        <div class="relative wrapper" *ngFor="let tarrif of tariffs; index as i">
+            <sw-tariff [ngClass]="{'firstEl': i == 0}" class="relative">             
+            </sw-tariff>
+            <button class="absolute w-10 h-10 left-10 top-10">Connect</button>
+        </div>
+    </section>
+
+    <div routerLink="../home" class="relative z-50 h-full wrapper2"> 
+
+    </div>
+</div>
