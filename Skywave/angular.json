@@ -68,7 +68,8 @@
               "browserTarget": "Skywave:build:production"
             },
             "development": {
-              "browserTarget": "Skywave:build:development"
+              "browserTarget": "Skywave:build:development",
+              "proxyConfig": "src/proxy.config.json"
             }
           },
           "defaultConfiguration": "development"

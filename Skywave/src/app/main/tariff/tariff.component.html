@@ -1,15 +1,16 @@
 <section class="ml-7">
     <main class="relative mt-10 bg-white rounded-lg shadow-lg">
-        <img class="z-10" src="../../../assets/tariffIcons/games.png" alt="TariffIcon">
+        <img class="z-10" src={{imageSrc}} alt="TariffIcon">
         <div class="flex items-center justify-center w-full rounded-t-lg header h-1/3" #header>
             <h2 class="pb-2 pl-1 text-4xl text-white sm:pb-3 sm:text-2xl">$<span class="p-1 text-5xl sm:text-4xl">{{pricePerMonth}}</span>/mo</h2>
         </div>
         <div class="absolute flex justify-center w-2/3 rounded-md shadow-sm top-1/4 nameDiv" #nameDiv>
-            <h3 class="p-3 text-2xl text-white sm:p-2 sm:text-xl">{{ tariffName }}</h3>
+            <h3 *ngIf="tariffName != 'Pick a plan'; else pickPlanButton" class="p-3 text-2xl text-white sm:p-2 sm:text-xl">{{ tariffName }}</h3>
+            <ng-template #pickPlanButton><h3 routerLink="../tariffList" class="p-3 text-2xl text-white sm:p-2 sm:text-xl">{{ tariffName }}</h3></ng-template>
         </div>
         <ul class="mt-16 sm:mt-12">
-            <li class="p-3 text-xl border-t-2 sm:p-1 sm:text-lg"><b #coloredText>{{data}} Mb</b> of Data</li>
-            <li class="p-3 text-xl border-t-2 sm:p-1 sm:text-lg"><b #coloredText>{{calls}} Min</b> of Calls</li>
+            <li class="p-3 text-xl border-t-2 sm:p-1 sm:text-lg"><b *ngIf="data != 0; else elseBlock" #coloredText>{{data}} Mb</b><ng-template #elseBlock><b  #coloredText>Unlimited Mb</b></ng-template>  of Data</li>
+            <li class="p-3 text-xl border-t-2 sm:p-1 sm:text-lg"><b *ngIf="data != 0; else elseBlock2" #coloredText>{{calls}} Min</b> <ng-template #elseBlock2><b  #coloredText>Unlimited Min</b></ng-template> of Calls</li>
             <li class="p-3 text-xl sm:p-1 sm:text-lg border-y-2"><b #coloredText>{{sms}}</b> SMSes</li>
         </ul>
     </main>

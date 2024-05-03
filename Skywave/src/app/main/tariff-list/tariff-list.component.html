@@ -3,10 +3,14 @@
         
     </div>
     <section class="absolute z-30 flex w-full overflow-hidden overflow-x-scroll whitespace-nowrap top-32">
-        <div class="relative wrapper" *ngFor="let tarrif of tariffs; index as i">
-            <sw-tariff [ngClass]="{'firstEl': i == 0}" class="relative">             
+        <div class="relative wrapper" *ngFor="let tariff of tariffs; index as i; 
+        trackBy: trackTariffs">
+            <sw-tariff [data]="tariff.data" [calls]="tariff.calls"
+             [sms]="tariff.sms" [tariffName]="tariff.tariffName"
+              [colorScheme]="tariff.colorScheme" [imageSrc]="tariff.imageSrc"
+               [pricePerMonth]="tariff.pricePerMonth" [ngClass]="{'firstEl': i == 0}" class="relative">             
             </sw-tariff>
-            <button class="absolute w-10 h-10 left-10 top-10">Connect</button>
+            <button (click)="connectNewTariffPlan(tariff)"  class="absolute w-10 h-10 left-60 top-10">Connect</button>
         </div>
     </section>
 
